@@ -1,5 +1,9 @@
 # real
 
+![screenshot](https://i.imgur.com/BZ678gv.jpg)
+
+taka sobie strona internetowa sieci sklepów real napisana w vue inspirowana stroną auchana
+
 ## Project setup
 ```
 npm install
