@@ -9,8 +9,8 @@
                     <h1>Z kartą real ,- jeszcze tańsze zakupy</h1>
                     <h3>Na najbliższych zakupach załóż kartę real ,- a zakupy zrobisz jeszcze taniej</h3>
                     <div class="oferty">
-                        <Oferta v-bind:data="{id: 0, nazwa: 'Telefon Xiaomi Mi 9', wiecej: '2199zł bez karty', cena: '1649zł', url: 'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2019/2/pr_2019_2_26_12_54_20_802_01.jpg'}"></Oferta>
-                        <Oferta v-bind:data="{id: 0, nazwa: 'Mleko UHT Twój Kubek 3,2% 1l', wiecej: '2.99zł bez karty', cena: '1.99zł', url: 'http://www.mlekovita.com.pl/media/cache/product_view/uploads/products/401/prod_153.jpg'}"></Oferta>
+                        <Oferta v-bind:data="{id: 0, nazwa: 'Telefon Xiaomi Mi 9', wiecej: '2199zł bez karty', cena: '1649zł', url: 'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2019/2/pr_2019_2_26_12_54_20_802_01.jpg', ns: true}"></Oferta>
+                        <Oferta v-bind:data="{id: 0, nazwa: 'Mleko UHT Twój Kubek 3,2% 1l', wiecej: '2.99zł bez karty', cena: '1.99zł', url: 'http://www.mlekovita.com.pl/media/cache/product_view/uploads/products/401/prod_153.jpg', ns: true}"></Oferta>
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
             <div class="oferty">
                 <Oferta v-bind:key="oferta.id" v-for="oferta in oferty" v-bind:data="oferta"></Oferta>
             </div>
-            <div class="odkryj" v-on:click="$parent.current = 'Online'">Odkryj więcej</div>
+            <div class="odkryj" v-on:click="$parent.current = 'Zakupy'">Odkryj więcej</div>
         </div>
     </div>
 </template>
@@ -39,25 +39,29 @@
                     url: 'https://res.cloudinary.com/dj484tw6k/f_auto,q_auto,c_pad,b_white,w_360,h_360/v1507259978/bb/6995.png',
                     nazwa: "Chipsy Lays zielona cebulka",
                     wiecej: "150g",
-                    cena: "3.49zł"
+                    cena: "3.49zł",
+                    ns: true
                 }, {
                     id: 1,
                     url: 'https://www.ezebra.pl/pol_pl_KTC-OLEJ-PALMOWY-CZYSTY-NATURALNY-KOSMETYK-500ML-1237_1.jpg',
                     nazwa: "Olej palmowy",
                     wiecej: "500ml",
-                    cena: "10.49zł"
+                    cena: "10.49zł",
+                    ns: true
                 }, {
                     id: 2,
                     url: 'https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/201607/13/00118032900054____2__600x600.jpg',
                     nazwa: "Paella do mikrofali",
                     wiecej: "250g",
-                    cena: "6.99zł"
+                    cena: "6.99zł",
+                    ns: true
                 }, {
                     id: 3,
                     url: 'http://www.maluta.galeo.pro/media/p/74.jpg',
                     nazwa: "Śmietana 18% maluta",
                     wiecej: "400g",
-                    cena: "3.99zł"
+                    cena: "3.99zł",
+                    ns: true
                 }]
             }
         },

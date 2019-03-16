@@ -6,7 +6,7 @@
       <div class="lbtn" v-on:click="current = 'Sklepy'">
         <div>Znajdź sklep!</div>
       </div>
-      <div class="lbtn" v-on:click="current = 'Online'">Zakupy on-line</div>
+      <div class="lbtn" v-on:click="current = 'Zakupy'">Zakupy on-line</div>
       </div>
     <component
       v-bind:is="currentZakladka"
@@ -31,19 +31,19 @@
 
 <script>
 import Glowna from './components/Glowna';
-import Online from "./components/Online";
+import Zakupy from "./components/Zakupy";
 import Sklepy from "./components/Sklepy";
 export default {
   name: 'app',
   components: {
     Glowna,
-    Online,
+    Zakupy,
     Sklepy
   },
   data: function() {
     return {
       current: 'Glowna',
-      zakladki: ['Glowna', 'Online', 'Sklepy']
+      zakladki: ['Glowna', 'Zakupy', 'Sklepy']
     }
   },
   computed: {
@@ -65,7 +65,7 @@ $realowy: #1d5cb2;
 
 body {
   margin: 0;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   color: #1b1b1b;
 }
 
@@ -130,6 +130,19 @@ a {
   &:hover {
     background: #113669;
   }
+}
+
+.semilbtn {
+  border-bottom-left-radius: 128487px;
+  border-top-left-radius: 128487px;
+  border-top-right-radius: 128487px;
+  border-bottom-right-radius: 128487px;
+  background: #1d5cb2;
+  color: white;
+  padding: 18px 32px;
+  font-weight: bold;
+  font-size: 90%;
+  transition: 300ms;
 }
 
 .dolek {

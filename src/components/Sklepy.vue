@@ -5,11 +5,11 @@
         <div class="obokmapki">
             
             <div class="ccc" v-if="wybor">
-                <h2>real {{ sklepy[choicc].title }}</h2>
-                <p>Godziny otwarcia</p>
-                <p><b>Poniedziałek - piątek</b> {{ wybor.otwarcia.pnpt }}</p>
-                <p><b>Sobota</b> {{ wybor.otwarcia.sob }}</p>    
-                <p><b>Niedziela (handlowa)</b> {{ wybor.otwarcia.nd }}</p>    
+                <div class="duzy">real {{ sklepy[choicc].title }}</div>
+                <span>Godziny otwarcia</span>
+                <span><b>Poniedziałek - piątek</b> {{ wybor.otwarcia.pnpt }}</span>
+                <span><b>Sobota</b> {{ wybor.otwarcia.sob }}</span>    
+                <span><b>Niedziela (handlowa)</b> {{ wybor.otwarcia.nd }}</span>    
             </div>
             <p v-else>Wybierz sklep z mapki</p>
         </div>
@@ -86,6 +86,7 @@ export default {
 <style lang="scss">
 .ccc span {
     display: block;
+    padding: 5px;
 }
 .mapki {
     position: relative;
@@ -101,9 +102,14 @@ export default {
     position: absolute;
     background: #1d5cb2;
     border-radius: 8px;
-    padding: 20px;
+    padding: 10px;
     margin: 20px;
     color: white;
+}
+.duzy {
+    font-weight: bold;
+    padding: 5px;
+    font-size: 150%;
 }
 #map {
     z-index: 0;
