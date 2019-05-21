@@ -11,7 +11,7 @@
                 <span class="kat-a">{{ kat.name }}</span>
             </div>
             <div class="topp oferty">
-                <Oferta v-for="(oferta, i) in produkty(kat.id)" v-bind:key="i" v-bind:data="oferta"></Oferta>
+                <Oferta class="oferta" v-for="(oferta, i) in produkty(kat.id)" v-bind:key="i" v-bind:data="oferta"></Oferta>
             </div>
         </div>
         <div>
@@ -90,30 +90,30 @@ export default {
                 },
                 {
                     kat: 1,
-                    url: "http://www.maluta.galeo.pro/media/p/73.jpg",
+                    url: "https://img.e-piotripawel.pl/brandbank/566782",
                     nazwa: "MALUTA Śmietana 18%",
-                    wiecej: "200g",
-                    cena: 1.59
+                    wiecej: "400g",
+                    cena: 2.59
                 },
                 {
                     kat: 1,
-                    nazwa: 'Mleko UHT Twój Kubek 3,2%', 
+                    nazwa: 'Mleko Łowickie 3,2%', 
                     wiecej: '1l', 
                     cena: 1.99,
-                    url: 'http://www.mlekovita.com.pl/media/cache/product_view/uploads/products/401/prod_153.jpg'
+                    url: 'https://secure.ce-tescoassets.com/assets/PL/199/5900120011199/ShotType1_540x540.jpg'
                 },
                 {
                     kat: 1,
-                    url: 'https://image.ceneostatic.pl/data/products/41203291/i-mlekpol-mazurski-smak-twarog-poltlusty-250-g.jpg',
-                    nazwa: "Mlekpol Mazurski Smak twaróg półtłusty",
+                    url: 'https://res.cloudinary.com/dj484tw6k/f_auto,q_auto,c_pad,b_white,w_356,h_356/v1529378438/bb/14186.png',
+                    nazwa: "Rasistowski półtłusty twaróg Bieluch",
                     cena: 3.19,
                     wiecej: "250g"
                 },
                 {
                     kat: 1,
-                    url: 'http://www.maluta.galeo.pro/media/p/124.jpg',
-                    nazwa: "MALUTA Masło extra",
-                    cena: 7.69,
+                    url: 'https://delido.co.uk/images/produktysmall/5900512300108.jpg',
+                    nazwa: "MLEKOVITA Masło extra polskie",
+                    cena: 5.69,
                     wiecej: "200g"
                 },
                 {
@@ -252,5 +252,9 @@ export default {
     .oferty {
         display: flex;
         flex-basis: 90%;
+    }
+
+    .oferta {
+
     }
 </style>

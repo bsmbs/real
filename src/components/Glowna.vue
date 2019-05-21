@@ -3,30 +3,37 @@
         <div class="prezentacje">
             <div class="prezentacja">
                 <div class="obrazek">
-                    <img src="https://www.real.de/typo3conf/ext/wfp2_real_giftcard/Resources/Public/Images/geschenkkarte.jpg">
+                    <img src="https://www.getraenke-hoffmann.de/sites/default/files/2018-09/gh_payback_karte.jpg">
                 </div>
                 <div class="opis">
-                    <h1>Z kartą real ,- jeszcze tańsze zakupy</h1>
-                    <h3>Na najbliższych zakupach załóż kartę real ,- a zakupy zrobisz jeszcze taniej</h3>
+                    <h1>Podaruj komuś prezent</h1>
+                    <h3>Za kartę podarunkową real ,- można kupić wszystko w naszym sklepie. To nie może być nietrafiony prezent!</h3>
                     <div class="oferty">
-                        <Oferta v-bind:data="{id: 0, nazwa: 'Telefon Xiaomi Mi 9', wiecej: '2199zł bez karty', cena: '1649zł', url: 'https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2019/2/pr_2019_2_26_12_54_20_802_01.jpg', ns: true}"></Oferta>
-                        <Oferta v-bind:data="{id: 0, nazwa: 'Mleko UHT Twój Kubek 3,2% 1l', wiecej: '2.99zł bez karty', cena: '1.99zł', url: 'http://www.mlekovita.com.pl/media/cache/product_view/uploads/products/401/prod_153.jpg', ns: true}"></Oferta>
+                        <Oferta v-bind:data="{id: 0, nazwa: 'Eksluzywne krzesło na balkon', wiecej: '...albo ogród', cena: '66.99zł', url: 'https://www.twojpasaz.pl/userdata/gfx/b0580bfdd8ef51d31b8dcccba5da3146.jpg', ns: true}"></Oferta>
+                        <Oferta v-bind:data="{id: 0, nazwa: 'KFC kubełek', wiecej: 'We wtorki', cena: '9.99zł', url: 'https://kfc.pl/assets/img/domains/pl/homepage-image-bucket.png', ns: true}"></Oferta>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="lista">
             <img class="lista-maly" src="../assets/real.png">
-            <span class="lista-tytul">Oferty real ,-</span>
-            <div class="oferty">
-                <Oferta v-bind:key="oferta.id" v-for="oferta in oferty" v-bind:data="oferta"></Oferta>
+            <div class="prezentacja">
+                <div class="obrazek">
+                    <img v-bind:src="niskie">
+                </div>
+                <div class="opis">
+                    <h1>Włączamy niskie ceny! w realu ,-</h1>
+                    <h3>Najniższe ceny na rynku znajdziesz właśnie w sklepach real ,-! Zapraszamy do zakupów</h3>
+                </div>
             </div>
-            <div class="odkryj" v-on:click="$parent.current = 'Zakupy'">Odkryj więcej</div>
+            <!--<div class="oferty">
+                <Oferta v-bind:key="oferta.id" v-for="oferta in oferty" v-bind:data="oferta"></Oferta>
+            </div>-->
+            <div class="odkryj" v-on:click="$parent.current = 'Zakupy'">Zrób zakupy!</div>
         </div>
     </div>
 </template>
 
 <script>
+    import Niskie from '../assets/niskie.png';
     import Oferta from './Oferta';
     export default {
         components: {
@@ -34,6 +41,7 @@
         },
         data: function () {
             return {
+                niskie: Niskie,
                 oferty: [{
                     id: 0,
                     url: 'https://res.cloudinary.com/dj484tw6k/f_auto,q_auto,c_pad,b_white,w_360,h_360/v1507259978/bb/6995.png',
@@ -76,6 +84,7 @@
 <style lang="scss">
     .prezentacje {
         display: flex;
+        flex-direction: column;
     }
     .prezentacja {
         display: flex;
@@ -107,7 +116,7 @@
         margin: auto;
         display: block;
         width: 100px;
-        padding: 10px;
+        padding: 25px;
     }
 
     .oferty {
