@@ -162,12 +162,15 @@
     }
 
     @media screen and (min-width: 1024px) {
-        .oferty { flex-direction: row; }
+        .oferty { 
+            flex-direction: row; 
+            grid-template-columns: repeat(4, 25%);
+        }
     }
 
     @media screen and (max-width: 1024px) {
-            .oferty > * {
-        margin: 10px auto;
+        .oferty > * {
+            margin: 10px auto;
         }
     }
     
