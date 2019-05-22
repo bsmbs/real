@@ -27,6 +27,7 @@ import Oferta from './Oferta';
 import Candy from '../assets/candy.png';
 import Gotowe from '../assets/noodles.png';
 import Nabial from '../assets/milk.png';
+import Bistro from '../assets/cutlery.png';
 import Napoje from '../assets/water.png'
 
 export default {
@@ -38,6 +39,11 @@ export default {
     },
     data: function() { return {
         kategorie: [
+            {
+                id: 9,
+                name: "real ,- bistro",
+                icon: Bistro
+            },
             {
                 id: 0,
                 name: "Słodycze",
@@ -129,7 +135,7 @@ export default {
                     nazwa: "Carretilla Paella Marinera",
                     wiecej: "250g",
                     cena: 6.99
-                }, 
+                },
                 {
                     kat: 2,
                     url: 'https://secure.ce-tescoassets.com/assets/PL/921/5900477000921/ShotType1_540x540.jpg',
@@ -164,6 +170,35 @@ export default {
                     nazwa: "Monster Energy",
                     cena: 4.69,
                     wiecej: "500ml"
+                },
+                // BISTRO
+                {
+                    kat: 9,
+                    url: 'https://barfeta.pl/wp-content/uploads/2018/01/pierogi-ruskie800x500-600x375.png',
+                    nazwa: "Pierogi ruskie",
+                    wiecej: "1kg",
+                    cena: 7.99
+                },
+                {
+                    kat: 9,
+                    url: 'https://kfc.pl/assets/img/domains/pl/homepage-image-bucket.png',
+                    nazwa: "Kubełek KFC",
+                    wiecej: "1 szt.",
+                    cena: 12.99
+                },
+                {
+                    kat: 9,
+                    url: 'http://cuantas-calorias.org/wp-content/uploads/2017/01/paella-2.png',
+                    nazwa: "Hiszpański specjał: Paella",
+                    wiecej: "dla dwóch osób",
+                    cena: 49.99
+                },
+                {
+                    kat: 9,
+                    url: 'https://barfeta.pl/wp-content/uploads/2018/02/ros%C3%B3%C5%82-600x600.png',
+                    nazwa: "Rosół",
+                    wiecej: "mniam",
+                    cena: 9.99
                 }
         ]
     }
@@ -250,11 +285,14 @@ export default {
     }
 
     .oferty {
-        display: flex;
-        flex-basis: 90%;
+        /* display: flex;
+        flex-basis: 90%; */
+        display: grid;
+        width: 100%;
     }
 
     .oferta {
-
+        width: 100%;
+        justify-self: stretch;
     }
 </style>
